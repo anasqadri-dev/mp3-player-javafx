@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="760.0" stylesheets="@style.css" styleClass="main-window" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.musicplayer.mp3Controller">
+   <children>
+      <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="25.0" left="30.0" right="30.0" top="25.0" />
+         </padding>
+         <children>
+
+            <Label fx:id="songLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" text="MP3 Player" styleClass="song-title" />
+
+            <ProgressBar fx:id="songProgressBar" maxWidth="1.7976931348623157E308" prefHeight="4.0" progress="0.0" styleClass="custom-progress" />
+
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetMedia" prefHeight="36.0" prefWidth="75.0" text="Reset" styleClass="btn-secondary" />
+                  <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previousMedia" prefHeight="36.0" prefWidth="70.0" text="Prev" styleClass="btn-nav" />
+                  <Button fx:id="playButton" mnemonicParsing="false" onAction="#playMedia" prefHeight="40.0" prefWidth="85.0" text="Play" styleClass="btn-primary" />
+                  <Button fx:id="pauseButton" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="40.0" prefWidth="85.0" text="Pause" styleClass="btn-primary" />
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextMedia" prefHeight="36.0" prefWidth="70.0" text="Next" styleClass="btn-nav" />
+
+                  <HBox HBox.hgrow="ALWAYS" />
+
+                  <ComboBox fx:id="speedBox" prefHeight="36.0" prefWidth="95.0" promptText="Speed" styleClass="custom-combo" />
+                  <Slider fx:id="volumeSlider" max="100.0" prefHeight="36.0" prefWidth="110.0" value="70.0" styleClass="custom-slider" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
